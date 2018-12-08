@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Portfolio</title>
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+          crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+        <style>
+            .grid-item {
+                margin-bottom: 10px;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+            .width-2 img {
+                width: 610px;
+            }
+            img {
+                width: 300px;
+                height: auto;
+            }
+            .grid {
+                margin: 0 auto;
+                width: 930px;
+                background: #eee;
+                padding: 10px 5px 0 5px;
+                border-radius: 5px;
+                border: 2px solid #ccc;
+                box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.59);
+                margin-bottom: 20px;
+            }
+            @media screen and (max-width: 992px) {
+                .grid {
+                    width: 620px;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .grid {
+                    width: 310px;
+                }
+                .width-2 img {
+                    width: 300px;
+                }
+            }
+            h1 {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Portfolio
+        </h1>
+        <p>
+            This is a portfolio website to test out the <a href="https://masonry.desandro.com/">Masonry JS</a> library.
+        </p>
+        <div class="grid">
+            <div class="grid-item"><img src="https://via.placeholder.com/300x200"></div>
+            <div class="grid-item"><img src="https://via.placeholder.com/300x410"></div>
+            <div class="grid-item"><img src="https://via.placeholder.com/300x500"></div>
+            <div class="grid-item"><img src="https://via.placeholder.com/300x200"></div>
+            <div class="grid-item width-2"><img src="https://via.placeholder.com/610x100"></div>
+            <div class="grid-item"><img src="https://via.placeholder.com/300x200"></div>
+            <div class="grid-item"><img src="https://via.placeholder.com/300x300"></div>
+            <div class="grid-item"><img src="https://via.placeholder.com/300x300"></div>
+            <div class="grid-item"><img src="https://via.placeholder.com/300x110"></div>
+        </div>
+        <script>
+        jQuery(window).on('load', function(){
+        $('.grid').masonry({
+            // options
+            itemSelector: '.grid-item',
+            // columnWidth: 200,
+            gutterwidth: 15
+            });
+        });
+        </script>
+    </body>
+</html>
